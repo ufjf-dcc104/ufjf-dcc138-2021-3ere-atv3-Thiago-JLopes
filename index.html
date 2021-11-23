@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemplo 02</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Exemplo 02</h1>
     <canvas></canvas>
-    <img src="assets/skeleton01.png"/>
+    <img src="assets/skeleton01.png" />
     <script>
-        const canvas = document.querySelector("canvas");
-        const ctx = canvas.getContext("2d");
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
+      const skelly = document.querySelector("img");
 
-        ctx.fillStyle = "green";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      skelly.addEventListener("load", terminouDeCarregar);
+
+      ctx.fillStyle = "green";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      function terminouDeCarregar() {
+        ctx.drawImage(skelly, 0, 0);
+      }
     </script>
-</body>
+  </body>
 </html>
