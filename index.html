@@ -22,8 +22,8 @@
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       }
 
-      let c = 1;
-      let l = 2;
+      let c = 0;
+      let l = 0;
 
       let pose = 0;
       let quadro = 0;
@@ -40,15 +40,6 @@
         { qmax: 9, pv: 9 },
         { qmax: 9, pv: 9 },
         { qmax: 9, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 13, pv: 27 },
-        { qmax: 13, pv: 27 },
-        { qmax: 13, pv: 27 },
-        { qmax: 13, pv: 27 },
-        { qmax: 6, pv: 9 },
       ];
 
       function terminouDeCarregar() {}
@@ -66,15 +57,15 @@
         ctx.drawImage(
           skelly,
           //sx, sy, sw, sh
-          Math.floor(quadro) * 64,
-          pose * 64,
-          64,
-          64,
+          Math.floor(quadro) * 70,
+          pose * 80,
+          70,
+          80,
           //dx, dy, dw, dh
           0,
-          0,
-          64,
-          64
+          70,
+          70,
+          80
         );
 
         requestAnimationFrame(passo);
