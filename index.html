@@ -12,10 +12,10 @@
     <script>
       const canvas = document.querySelector("canvas");
       const ctx = canvas.getContext("2d");
-      const skelly = new Image();
-      skelly.src = "assets/kenpng.png";
+      const design = new Image();
+      design.src = "assets/kenpng.png";
 
-      skelly.addEventListener("load", terminouDeCarregar);
+      design.addEventListener("load", terminouDeCarregar);
 
       function desenhaFundo() {
         ctx.fillStyle = "black";
@@ -50,7 +50,7 @@
         quadro = quadro >= POSES[pose].qmax - 1 ? 0 : quadro + POSES[pose].pv * dt;
 
         ctx.drawImage(
-          skelly,
+          design,
           //sx, sy, sw, sh
           Math.floor(quadro) * 70,
           pose * 80,
