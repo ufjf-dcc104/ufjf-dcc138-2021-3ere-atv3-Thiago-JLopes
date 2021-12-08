@@ -13,12 +13,12 @@
       const canvas = document.querySelector("canvas");
       const ctx = canvas.getContext("2d");
       const skelly = new Image();
-      skelly.src = "assets/skelly.png";
+      skelly.src = "assets/kenpng.png";
 
       skelly.addEventListener("load", terminouDeCarregar);
 
       function desenhaFundo() {
-        ctx.fillStyle = "green";
+        ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       }
 
